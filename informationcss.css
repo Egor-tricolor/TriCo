@@ -1,0 +1,228 @@
+
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 5px 35px;
+	font-weight: 600;
+	font-size:18px;
+	padding-top: 15px;
+}
+.head{
+	padding-top: 30px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;/*ось z - идёт вверх*/
+}
+.header_inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.podpic{
+	font-size: 15px;
+	font-family: URW Chancery L, cursive;
+}
+
+.head_logo{
+	font-size: 30px;
+	font-weight: 700;
+	color: black;
+	justify-content: space-between;
+	font-family: Andale Mono, monospace;
+}
+
+.nav{
+	font-size: 50px;
+	text-transform: uppercase;/*трансформирует текст навигации в загл.буквы*/
+	font-family: Andale Mono, monospace;
+}
+
+
+.nav_link {
+	color: #000;
+	text-decoration: none; /*убирает нижнее подчёркивание*/
+	font-size: 15px;
+	vertical-align: top;
+	margin: 0 10px;
+	transition: color .1s linear;
+	display: inline-block;/*выстраиваем в ряд горизонтально*/
+	font-size: 25px;
+	align-items: center;
+	position: relative;
+}
+
+.nav_link:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #15e835;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	opacity: 0; 
+	transition: .1s linear;
+
+}
+
+.nav_link:hover {
+	color: #15e835;
+}
+.nav_link:hover:after {
+	opacity: 1;
+}
+.company {
+	size: 1px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif; 
+	padding-top: 15px;
+}
+.contact-txt {
+	background-color: #696969;
+	width: 650px;
+	height: 550px;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: left;
+}
+.Phone-txt {
+	margin-top: 25px;
+	margin-left: 70px;
+	width: 500px;
+	height: 95px;
+ 	background-color: white;
+ 	border: 2px solid white;
+ 	border-radius: 15px;
+ 	padding-left: 15px;
+ 	font-size: 20px;
+}
+.Phone-txt h1{
+	font-size: 25px;
+	margin-bottom: -15px;
+	font-family: DejaVu Sans Mono, monospace;
+}
+.Phone-txt a{
+	text-decoration: none;
+	color: blue;
+}
+.Phone-txt a:visited {
+	color: blueviolet;
+}
+.adress {
+	margin-bottom: 500px;
+	margin-left: 70px;
+	width: 500px;
+	height: 95px;
+ 	background-color: white;
+ 	border: 2px solid white;
+ 	border-radius: 15px;
+ 	padding-left: 15px;
+ 	font-size: 20px;
+}
+.adress h1{
+	font-size: 25px;
+	margin-bottom: -35px;
+	font-family: DejaVu Sans Mono, monospace;
+}
+
+.seti{
+	margin-bottom: 500px;
+	margin-left: 70px;
+	width: 500px;
+	height: 400px;
+ 	background-color: white;
+ 	border: 2px solid white;
+ 	border-radius: 15px;
+ 	padding-left: 15px;
+ 	font-size: 20px;
+ 	z-index: 100;
+}
+.seti h1{
+	font-size: 25px;
+	margin-bottom: -35px;
+	font-family: DejaVu Sans Mono, monospace;
+}
+.seti img{
+	width: 40px;
+	height: 40px;
+}
+
+.seti a{
+	font-family: 'Source Sans Pro', sans-serif;
+	text-decoration: none;
+	font-size: 35px;
+	color: black;
+
+}
+.underline-one {
+	color: black; /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.underline-one:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.underline-one:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: red; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.8s;  /* Время эффекта */
+}
+.map{
+	position: absolute;
+	padding-left: 700px;
+	max-width: 150px;
+
+}
+@media (max-width: 320px){
+	.container a{
+		
+	}
+	.contact-txt{
+		background-color: none;
+	}
+}
+@media (max-width: 375px){
+	.container a{
+		display: block;
+		justify-content: space-between;
+		font-size: 20px;
+		padding-right: 75px;
+	}
+	.contact-txt{
+		background-color: none;
+	}
+	.seti{
+		background-color: none;
+	}
+}
+@media (max-width: 425px){
+	.container a{
+		display: block;
+		justify-content: space-between;
+		font-size: 25px;
+		padding-right: 75px;
+	}
+}
